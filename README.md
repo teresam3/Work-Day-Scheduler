@@ -2,6 +2,11 @@
 
 # 05 Third-Party APIs: Work Day Scheduler
 
+## Process
+First, had to create the HTML, JS, CSS files with the already existing code. And then linked a moment.js file to add the library in order to add the needed dates onto the page. 
+
+Since, this will exist mostly in the javascript file. I first created variables to call tho moment.js function in a more condensed manner. Plus I started by adding the current day to the header of the page to where it updates according to the actual current date. 
+
 ## User Story
 
 ```
