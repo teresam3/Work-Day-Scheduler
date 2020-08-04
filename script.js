@@ -11,41 +11,40 @@ $("#currentDay").append(currentDate)
 
 //added current time to the jumbotron
 function currentTime() { 
-    var time = moment().format('h:mm a')
-    $("#currentTime").text(time)
+    var timeNow = moment().format('h:mm a')
+    $("#currentTime").text(timeNow)
 }
     setInterval(currentTime, 1000)
 
 //adds input into event id
-function eventPlanner() {
-    $("#event").add("form").val("text")
-}
+// function eventPlanner() {
+//     $("#event").add("form").val("text")
+// }
 
-eventPlanner()
-colorCode()
-
-console.log(currentHour)
-
+var eventHour = $(".event")
 function colorCode() {
     for (var i=0; i < blockHour.length; i++) {
-        
-       var hour = parseInt($(this).attr("hour"))
+
+       var hour = parseInt($(blockHour[i]).attr("hour"))
 
         console.log(blockHour[i].textContent.trim())
         if (hour < currentHour) {
-            $(this).addClass("past");
+            $(eventHour[i]).addClass("past");
         } 
         else if (hour === currentHour) {
-            $(this).removeClass("past");
-            $(this).addClass("present");
+            $(eventHour[i]).removeClass("past");
+            $(eventHour[i]).addClass("present");
         } 
         else {
-            $(this).removeClass("past");
-            $(this).removeClass("present");
-            $(this).addClass("future");
+            $(eventHour[i]).removeClass("past");
+            $(eventHour[i]).removeClass("present");
+            $(eventHour[i]).addClass("future");
         }
     }
 }
+
+colorCode()
+//eventPlanner()
 
 //saves to local storage
 // function saveMe() {
