@@ -1,21 +1,22 @@
 $(document).ready(function() {
 
+//created from html classes and ids
 var currentDate = moment().format("LL")
 var blockHour = $(".hour")
-var time
-var currentHour = time
+var time = moment().format('h:mm a')
+var currentHour = parseInt(time)
 
 //adds current day to header/jumbotron
 $("#currentDay").append(currentDate)
 
-//added ticking time to the jumbotron
+//added current time to the jumbotron
 function currentTime() { 
     var time = moment().format('h:mm a')
     $("#currentTime").text(time)
 }
     setInterval(currentTime, 1000)
 
-//added input into event id
+//adds input into event id
 function eventPlanner() {
     $("#event").add("form").val("text")
 }
@@ -23,25 +24,7 @@ function eventPlanner() {
 eventPlanner()
 colorCode()
 
-
-// //changes the color of event id based on time
-// function colorCode() {
-//     for (var i=0; i < blockHour.length; i++) {
-//         console.log(blockHour[i].textContent.trim())
-//         if (blockHour < currentHour) {
-//             $(this).addClass("past");
-//         } 
-//         else if (blockHour === currentHour) {
-//             $(this).removeClass("past");
-//             $(this).addClass("present");
-//         } 
-//         else {
-//             $(this).removeClass("past");
-//             $(this).removeClass("present");
-//             $(this).addClass("future");
-//         }
-//     }
-// }
+console.log(currentHour)
 
 function colorCode() {
     for (var i=0; i < blockHour.length; i++) {
