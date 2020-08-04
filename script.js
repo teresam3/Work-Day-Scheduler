@@ -23,14 +23,36 @@ function eventPlanner() {
 eventPlanner()
 colorCode()
 
-//changes the color of event id based on time
+
+// //changes the color of event id based on time
+// function colorCode() {
+//     for (var i=0; i < blockHour.length; i++) {
+//         console.log(blockHour[i].textContent.trim())
+//         if (blockHour < currentHour) {
+//             $(this).addClass("past");
+//         } 
+//         else if (blockHour === currentHour) {
+//             $(this).removeClass("past");
+//             $(this).addClass("present");
+//         } 
+//         else {
+//             $(this).removeClass("past");
+//             $(this).removeClass("present");
+//             $(this).addClass("future");
+//         }
+//     }
+// }
+
 function colorCode() {
     for (var i=0; i < blockHour.length; i++) {
+        
+       var hour = parseInt($(this).attr("hour"))
+
         console.log(blockHour[i].textContent.trim())
-        if (blockHour < currentHour) {
+        if (hour < currentHour) {
             $(this).addClass("past");
         } 
-        else if (blockHour === currentHour) {
+        else if (hour === currentHour) {
             $(this).removeClass("past");
             $(this).addClass("present");
         } 
