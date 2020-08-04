@@ -32,6 +32,7 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime"></p>
     </header>
    
     <div class="container" id ="time-blocks">
@@ -40,9 +41,7 @@
           <div class="col-sm-1 hour">
             9am
           </div>
-          <div class="col-sm-10 past">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -53,9 +52,7 @@
           <div class="col-sm-1 hour">
             10am
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -66,9 +63,7 @@
           <div class="col-sm-1 hour">
             11am
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -79,9 +74,7 @@
           <div class="col-sm-1 hour">
             12pm
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -92,9 +85,7 @@
           <div class="col-sm-1 hour">
             1pm
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -105,9 +96,7 @@
           <div class="col-sm-1 hour">
             2pm
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -118,9 +107,7 @@
           <div class="col-sm-1 hour">
             3pm
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -131,9 +118,7 @@
           <div class="col-sm-1 hour">
             4pm
           </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
+          <div class="col-sm-10 event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
@@ -144,66 +129,12 @@
           <div class="col-sm-1 hour">
             5pm
           </div>
-          <div class="col-sm">
-            One of three columns
-          </div>
+          <div class="col-sm event" id="event"></div>
           <div class="col-sm-1 saveBtn">
             Save
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour">
-            6pm
-          </div>
-          <div class="col-sm-10">
-            One of three columns
-          </div>
-          <div class="col-sm-1 saveBtn">
-            Save
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour">
-          7pm
-          </div>
-          <div class="col-sm-10">
-          One of three columns
-          </div>
-          <div class="col-sm-1 saveBtn">
-          Save
-          </div>
-        </div>
-      </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-1 hour">
-            8pm
-            </div>
-            <div class="col-sm-10">
-              One of three columns
-            </div>
-            <div class="col-sm-1 saveBtn">
-            Save
-            </div>
-          </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-1 hour">
-              9pm
-              </div>
-              <div class="col-sm-10">
-                One of three columns
-              </div>
-              <div class="col-sm-1 saveBtn">
-                Save
-              </div>
-            </div>
-          </div>
     <!-- Timeblocks go here -->
     </div>
     
