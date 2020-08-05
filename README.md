@@ -5,9 +5,9 @@
 ## Process
 First, had to create the HTML, JS, CSS files with the already existing code. And then linked a moment.js file to add the library in order to add the needed dates onto the page. 
 
- I first created variables to call tho moment.js function in a more condensed manner. Plus I started by adding the current day to the header of the page to where it updates according to the actual current date. Next I added the time to the header below the date. Then I added a function to where the color changes to based on the time depending on if its past,present or future based the current time.
+ I first created variables to call tho moment.js function in a more condensed manner. Plus I started by adding the current day to the header of the page to where it updates according to the actual current date. Next I added the time to the header below the date. Then I added a function to where the color changes to based on the time depending on if its past,present or future based the current time. Last function, was the saveMe() and that saved information put into the timeblocks and saved it to local storage.
 
-Since most of the page will be static meaning that it'll stay mostly the same style, layout most of the time when the user is on it. I created a lot of it through html and added the input through html too. I made it transparent through css styling so you can add on all of the boxes.
+Since most of the page will be static meaning that it'll stay mostly the same style, layout most of the time when the user is on it. I created a lot of it through html and added the input through html too. I made it transparent through css styling so you can add on all of the boxes. I did the same with the buttons in order to keep the styling of the page consistent. 
 
 ## User Story
 
