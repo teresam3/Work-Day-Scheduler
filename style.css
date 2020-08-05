@@ -64,12 +64,18 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
+    border-radius: 12px
   }
   
+  .btn {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+  }
+
   .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
-    border: orange;
   }
   
   .planner {
