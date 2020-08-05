@@ -16,3 +16,9 @@ AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
+
+## git 
+github repo: https://github.com/teresam3/Work-Day-Scheduler
+
+## link 
+to site : file:///Users/teresamaldonado/Workspace/Work-Day-Scheduler/index.html
