@@ -5,6 +5,8 @@ var currentDate = moment().format("LL")
 var blockHour = $(".hour")
 var time = moment().format('h:mm a')
 var currentHour = parseInt(time)
+var save = window.localStorage.setItem("#planner", "text")
+
 
 //adds current day to header/jumbotron
 $("#currentDay").append(currentDate)
@@ -15,11 +17,6 @@ function currentTime() {
     $("#currentTime").text(timeNow)
 }
     setInterval(currentTime, 1000)
-
-//adds input into event id
-// function eventPlanner() {
-//     $("#event").add("form").val("text")
-// }
 
 var eventHour = $(".event")
 function colorCode() {
@@ -42,13 +39,14 @@ function colorCode() {
         }
     }
 }
-
 colorCode()
-//eventPlanner()
+saveMe()
 
 //saves to local storage
-// function saveMe() {
+function saveMe() {
+    $("#saveBtn").on("click", save)
+ }
 
-// }
+
 
 })
