@@ -24,7 +24,7 @@ function colorCode() {
 
        var hour = parseInt($(blockHour[i]).attr("hour"))
 
-        console.log(blockHour[i].textContent.trim())
+        //console.log(blockHour[i].textContent.trim())
         if (hour < currentHour) {
             $(eventHour[i]).addClass("past");
         } 
