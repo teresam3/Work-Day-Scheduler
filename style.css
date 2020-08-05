@@ -64,7 +64,6 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-    border-radius: 12px
   }
   
   .btn {
@@ -83,7 +82,6 @@ body {
     color: black;
     border: none;
     outline:none;
-    height:30px;
     transition:height 1s;
     -webkit-transition:height 1s;
 }
