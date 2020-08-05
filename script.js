@@ -5,7 +5,7 @@ var currentDate = moment().format("LL")
 var blockHour = $(".hour")
 var time = moment().format('h:mm a')
 var currentHour = parseInt(time)
-var save = window.localStorage.setItem("#planner", "text")
+var save =localStorage.setItem("text", "#planner")
 
 
 //adds current day to header/jumbotron
@@ -40,13 +40,12 @@ function colorCode() {
     }
 }
 colorCode()
-saveMe()
 
 //saves to local storage
 function saveMe() {
     $("#saveBtn").on("click", save)
  }
-
+saveMe()
 
 
 })
