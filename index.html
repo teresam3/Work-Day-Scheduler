@@ -1,174 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!---Bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <!----font-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <!-----google API-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <!----css stylesheet-->
-    <link rel="stylesheet" href="./style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <!-----bootstrap header-->
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <p id="currentTime"></p>
-    </header>
-   
-    <div class="container" id ="time-blocks">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="9">
-            9am
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!---Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <!----font-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-----google API-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <!----css stylesheet-->
+  <link rel="stylesheet" href="./style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <!-----bootstrap header-->
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+    <p id="currentTime"></p>
+  </header>
+
+  <div class="container" id="time-blocks">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="9">
+          9am
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
         </div>
       </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="10">
-            10am
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="11">
-            11am
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-        <br>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="12">
-            12pm
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="1">
-            1pm
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="2">
-            2pm
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="3">
-            3pm
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="4">
-            4pm
-          </div>
-          <div class="col-sm-10 event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="saveBtn" class="saveBtn btn textarea">Save</button>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-1 hour" hour="5">
-            5pm
-          </div>
-          <div class="col-sm event" id="event">
-            <input type="text" id="planner" class="planner">
-          </div>
-          <div class="col-sm-1 saveBtn">
-            <button id="savebtn" class="saveBtn btn textarea" >Save</button>
-          </div>
-        </div>
-      </div>
-    <!-- Timeblocks go here -->
     </div>
-    
-    <!----jquery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!---momentjs-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <!---personal script files-->
-    <script src="./script.js"></script>
-  </body>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="10">
+          10am
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="11">
+          11am
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+      <br>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="12">
+          12pm
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="1">
+          1pm
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="2">
+          2pm
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="3">
+          3pm
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="4">
+          4pm
+        </div>
+        <div class="col-sm-10 event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="saveBtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1 hour" hour="5">
+          5pm
+        </div>
+        <div class="col-sm event" id="event">
+          <input type="text" id="planner" class="planner">
+        </div>
+        <div class="col-sm-1 saveBtn">
+          <button id="savebtn" class="saveBtn btn textarea">Save</button>
+        </div>
+      </div>
+    </div>
+    <!-- Timeblocks go here -->
+  </div>
+
+  <!----jquery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!---momentjs-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!---personal script files-->
+  <script src="./script.js"></script>
+</body>
+
 </html>
