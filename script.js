@@ -1,51 +1,51 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-//created from html classes and ids
-var currentDate = moment().format("LL")
-var blockHour = $(".hour")
-var time = moment().format('h:mm a')
-var currentHour = parseInt(time)
-var save =localStorage.setItem("text", "#planner")
+    //created from html classes and ids
+    var currentDate = moment().format("LL")
+    var blockHour = $(".hour")
+    var time = moment().format('h:mm a')
+    var currentHour = parseInt(time)
 
+    //adds current day to header/jumbotron
+    $("#currentDay").append(currentDate)
 
-//adds current day to header/jumbotron
-$("#currentDay").append(currentDate)
-
-//added current time to the jumbotron
-function currentTime() { 
-    var timeNow = moment().format('h:mm a')
-    $("#currentTime").text(timeNow)
-}
+    //added current time to the jumbotron
+    function currentTime() {
+        var timeNow = moment().format('h:mm a')
+        $("#currentTime").text(timeNow)
+    }
     setInterval(currentTime, 1000)
 
-var eventHour = $(".event")
-function colorCode() {
-    for (var i=0; i < blockHour.length; i++) {
+    var eventHour = $(".event")
 
-       var hour = parseInt($(blockHour[i]).attr("hour"))
+    function colorCode() {
+        for (var i = 0; i < blockHour.length; i++) {
 
-        //console.log(blockHour[i].textContent.trim())
-        if (hour < currentHour) {
-            $(eventHour[i]).addClass("past");
-        } 
-        else if (hour === currentHour) {
-            $(eventHour[i]).removeClass("past");
-            $(eventHour[i]).addClass("present");
-        } 
-        else {
-            $(eventHour[i]).removeClass("past");
-            $(eventHour[i]).removeClass("present");
-            $(eventHour[i]).addClass("future");
+            var hour = parseInt($(blockHour[i]).attr("hour"))
+
+            //console.log(blockHour[i].textContent.trim())
+            if (hour < currentHour) {
+                $(eventHour[i]).addClass("past");
+            } else if (hour === currentHour) {
+                $(eventHour[i]).removeClass("past");
+                $(eventHour[i]).addClass("present");
+            } else {
+                $(eventHour[i]).removeClass("past");
+                $(eventHour[i]).removeClass("present");
+                $(eventHour[i]).addClass("future");
+            }
         }
     }
-}
-colorCode()
+    colorCode()
 
-//saves to local storage
-function saveMe() {
-    $("#saveBtn").on("click", save)
- }
-saveMe()
+    //saves to local storage
+    $("#saveBtn").on("click", function (event) {
+            var key =($(this).parent().siblings(".hour").attr('hour'))
+            var value =($(this).parent().siblings("#event").children("#planner").val())
+            localStorage.setItem(key, value)
+        }
 
+
+    )
 
 })
